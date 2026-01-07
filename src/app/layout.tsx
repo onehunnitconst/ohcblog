@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ModeToggle } from "@/components/mode-toggle";
+import MainLayout from "@/layout/main-layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,22 +27,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <header className="mb-14 flex items-center justify-between">
-              <h1 className="text-2xl font-bold tracking-tight">
-                <a href="/">DevBlog</a>
-              </h1>
-              <nav className="flex gap-4 items-center text-sm font-medium">
-                <a href="/" className="hover:underline underline-offset-4">Posts</a>
-                <a href="/about" className="text-muted-foreground hover:text-foreground">About</a>
-                <ModeToggle />
-              </nav>
-            </header>
-            <main>{children}</main>
-            <footer className="mt-20 pt-10 border-t text-center text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} DevBlog. All rights reserved.
-            </footer>
-          </div>
+          <MainLayout>
+            {children}
+          </MainLayout>
         </ThemeProvider>
       </body>
     </html>
