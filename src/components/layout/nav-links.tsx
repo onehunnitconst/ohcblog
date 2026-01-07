@@ -13,7 +13,7 @@ export function NavLinks() {
         href="/"
         className={cn(
           'hover:text-foreground transition-colors',
-          pathname === '/' || pathname.startsWith('/posts')
+          pathname === '/' || pathname?.startsWith('/posts')
             ? 'text-foreground font-semibold'
             : 'text-muted-foreground'
         )}

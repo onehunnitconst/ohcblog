@@ -1,5 +1,5 @@
 import { getPostBySlug, getPostSlugs } from '@/lib/mdx';
-import PostPageContainer from '@/pages/post/container';
+import PostPageContainer from '@/features/post/container';
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
