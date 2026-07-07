@@ -2,7 +2,10 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { GitHubIcon } from '@/components/icons/github';
+import { LinkedInIcon } from '@/components/icons/linkedin';
+import { XIcon } from '@/components/icons/x';
+import { Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AboutPageView() {
@@ -34,14 +37,20 @@ export default function AboutPageView() {
         <div className="flex gap-4">
           <Button variant="outline" size="sm" asChild>
             <Link href="https://github.com/onehunnitconst" target="_blank">
-              <Github className="mr-2 h-4 w-4" />
+              <GitHubIcon className="mr-2 h-4 w-4" />
               GitHub
             </Link>
           </Button>
           <Button variant="outline" size="sm" asChild>
             <Link href="https://linkedin.com/in/onehunnitconst" target="_blank">
-              <Linkedin className="mr-2 h-4 w-4" />
+              <LinkedInIcon className="mr-2 h-4 w-4" />
               LinkedIn
+            </Link>
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="https://x.com/onehunnitconst" target="_blank">
+              <XIcon className="mr-2 h-4 w-4" />
+              X
             </Link>
           </Button>
           <Button variant="outline" size="sm" asChild>
@@ -50,7 +59,6 @@ export default function AboutPageView() {
               Email
             </Link>
           </Button>
-          
         </div>
       </section>
 
